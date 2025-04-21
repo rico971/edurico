@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Organisateur Personnel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        #calendrier {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        #calendrier th, #calendrier td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        #calendrier th {
+            background-color: #f0f0f0;
+        }
+        #calendrier td {
+            cursor: pointer;
+        }
+        #calendrier td:hover {
+            background-color: #f0f0f0;
+        }
+        #emploi-du-temps {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        #emploi-du-temps th, #emploi-du-temps td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        #emploi-du-temps th {
+            background-color: #f0f0f0;
+        }
+        #documents {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #documents li {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #documents li button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #documents li button:hover {
+            background-color: #d32f2f;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+        }
+        @media (max-width: 600px) {
+            #calendrier th, #calendrier td {
+                padding: 8px;
+            }
+            #emploi-du-temps th, #emploi-du-temps td {
+                padding: 8px;
+            }
+            main {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mon Organisateur Personnel</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Planificateur Quotidien</h2>
+            <table id="calendrier">
+                <thead>
+                    <tr>
+                        <th>Dimanche</th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                        <th>Samedi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Emploi du Temps</h2>
+            <table id="emploi-du-temps">
+                <thead>
+                    <tr>
+                        <th>Heure</th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>9:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>10:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>11:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>12:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>14:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>15:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>16:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>17:00</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Mes Documents</h2>
+            <ul id="documents">
+                <li>Document 1 <button>Supprimer</button></li>
+                <li>Document 2 <button>Supprimer</button></li>
+            </ul>
+            <input type="text" id="nouveau-document" placeholder="Nom du document">
+            <button id="ajouter-document">Ajouter</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Mon Organisateur Personnel</p>
+    </footer>
+    <script>
+        const calendrier = document.getElementById("calendrier");
+        const jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+        const emploiDuTemps = document.getElementById("emploi-du-temps");
+        const heures = ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
+        const documentsList = document.getElementById("documents");
+        const nouveauDocumentInput = document.getElementById("nouveau-document");
+        const ajouterDocumentButton = document.getElementById("ajouter-document");
+
+        function remplirCalendrier() {
+            const aujourdhui = new Date();
+            let jour = aujourdhui.getDate();
+            let mois = aujourdhui.getMonth();
+            const annee = aujourdhui.getFullYear();
+            const premierJourDuMois = new Date(annee, mois, 1).getDay();
+            const nombreDeJoursDansLeMois = new Date(annee, mois + 1, 0).getDate();
+            let caseCourante = 0;
+
+            for (let i = 0; i < 6; i++) {
+                const row = calendrier.insertRow();
+                for (let j = 0; j < 7; j++) {
+                    const cell = row.insertCell();
+                    if (i === 0 && j < premierJourDuMois) {
+                        // Cases vides avant le premier jour du mois
+                    } else if (caseCourante < nombreDeJoursDansLeMois) {
+                        cell.textContent = jour;
+                        jour++;
+                        caseCourante++;
+                         if (jour === aujourdhui.getDate() && mois === aujourdhui.getMonth() && annee === aujourdhui.getFullYear()){
+                            cell.style.backgroundColor = "#FFFFE0";
+                        }
+                    }
+                }
+            }
+        }
+
+        function remplirEmploiDuTemps() {
+            for (let i = 0; i < heures.length; i++) {
+                const row = emploiDuTemps.insertRow();
+                const cellHeure = row.insertCell();
+                cellHeure.textContent = heures[i];
+                for (let j = 0; j < 5; j++) {
+                    const cellActivite = row.insertCell();
+                    cellActivite.textContent = ""; // Vous pouvez ajouter des activités ici
+                }
+            }
+        }
+
+        function ajouterDocument() {
+            const nomDocument = nouveauDocumentInput.value.trim();
+            if (nomDocument !== "") {
+                const listItem = document.createElement("li");
+                listItem.textContent = nomDocument;
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Supprimer";
+                deleteButton.onclick = function() {
+                    listItem.remove();
+                };
+                listItem.appendChild(deleteButton);
+                documentsList.appendChild(listItem);
+                nouveauDocumentInput.value = ""; // Réinitialise le champ de saisie
+            }
+        }
+
+        ajouterDocumentButton.addEventListener("click", ajouterDocument);
+
+        remplirCalendrier();
+        remplirEmploiDuTemps();
+    </script>
+</body>
+</html>
